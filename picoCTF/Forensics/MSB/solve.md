@@ -18,3 +18,4 @@ As the description and hint said, I look online for "lsb msb tool". Luckily I fo
 All I need to do is to run the python file:
     $ python3 sigBits.py -t=msb Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png
 As the output is a text file, grep the content and the flag should be there.
+Flag: picoCTF{15_y0ur_que57_qu1x071c_0r_h3r01c_ee3cb4d8}
