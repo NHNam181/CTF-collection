@@ -11,6 +11,9 @@ How about some hide and seek heh? Download this file and find the flag.
 ## Hint ##
 
 None
+
+## Tool ##
+Wireshark
  
 ## Solution ##
 The only file is provided is a pcap file. Deep investigation and I can find the flag after a couple of minutes

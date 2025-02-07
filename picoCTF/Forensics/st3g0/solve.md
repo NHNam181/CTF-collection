@@ -11,6 +11,9 @@ Download this image and find the flag.
 ## Hint ##
 
 1. We know the end sequence of the message will be $t3g0.
+
+## Tool ##
+zsteg
  
 ## Solution ##
 I downloaded the image. Firstly I check with exiftool for any helpful metadata and found none. As the hint said, I tried to find the message in HexEd.it and found nothing. Then I google for "stenography tool" and I found zsteg to detect stegano-hidden data in PNG & BMP.

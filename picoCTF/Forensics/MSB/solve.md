@@ -11,6 +11,9 @@ This image passes LSB statistical analysis, but we can't help but think there mu
 ## Hint ##
 
 1. What's causing the 'corruption' of the image?
+
+## Tool ##
+sigBits.py - Online python file for significant bits image decoder
  
 ## Solution ##
  
