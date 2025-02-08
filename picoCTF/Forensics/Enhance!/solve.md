@@ -13,7 +13,7 @@ Download this image file and find the flag.
 None
 
 ## Tool ##
-Exiftool
+Exiftool  
 Any preferred text editor
  
 ## Solution ##
