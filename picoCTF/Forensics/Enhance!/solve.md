@@ -13,6 +13,7 @@ Download this image file and find the flag.
 None
 
 ## Tool ##
+Exiftool
 Any preferred text editor
  
 ## Solution ##
@@ -146,7 +147,7 @@ I ask ChatGPT and find out that the xml format means that the file content is st
   </g>
 </svg>
 ```
-At the bottom, the flag can easily be seen
+At the bottom, the flag can easily be seen  
 Flag: picoCTF{3nh4n3d_aab729dd} (no idea why I couldn't submit)
 
 
