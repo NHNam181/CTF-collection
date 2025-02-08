@@ -21,7 +21,7 @@ Another stenography task. When I check in exiftool I found this interesting:
 MIME Type                       : image/svg+xml
 Work Format                     : image/svg+xml
 ```
-I ask ChatGPT and find out that the xml format means teh file content is structured in text-based markup similar to HTML. I opened the file with notepad and I found this
+I ask ChatGPT and find out that the xml format means that the file content is structured in text-based markup similar to HTML. I opened the file with notepad and I found this
 ```bash
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
