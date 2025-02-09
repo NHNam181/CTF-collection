@@ -15,7 +15,8 @@ None
 ## Tool ##
 Foremost
 Steghide
- 
+Sonic Visualiser
+
 ## Solution ##
 I was given an image. I used foremost to extract the hidden files within the image:
 ```bash
