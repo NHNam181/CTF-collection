@@ -26,8 +26,8 @@ The jpg picture:
 ![JPG picture](extracted_data/00000144.jpg)
 Maybe I can do something with this image?  
   
-The png picture
-![PNG picture](extracted_data/00000000.png)
+The png picture  
+![PNG picture](extracted_data/00000000.png)  
 It's weird.png. I dont think there is anything with this.  
 This comes down to the wav file - my biggest evidence. I open the wav file in Sonic Visualiser and find out that this is a Morse Code.
 ![morse](extracted_data/morse.png)
