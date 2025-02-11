@@ -13,9 +13,9 @@ Given a weird image.
 None
 
 ## Tool ##
-Foremost  
-Steghide  
-Sonic Visualiser  
+- Foremost  
+- Steghide  
+- Sonic Visualiser  
 
 ## Solution ##
 I was given an image. I used foremost to extract the hidden files within the image:  
