@@ -1,4 +1,4 @@
-# Virus Camp 1 #
+# Virus Camp 2 #
  
 ## Overview ##
  
@@ -70,4 +70,4 @@ The flag should be printed out as an image:
 ## Some thoughts & caution ##
 - This appears to be a VS Code malware, specifically a malicious VS Code extension that executes PowerShell commands. The activation function runs when the "rs" command is triggered.  
 - A better approach to find the suspicious file in this task is to check the PowerShell history in the AppData folder. After this, find the source that executed those commands. 
-- The reason I spent too much time in the AppData and completely ignored the .vscode was I thought that the key would be hidden there XD
+- During the challenge, I spent too much time in the AppData folder and I completely ignored the .vscode folder.The reason was I thought that the key would be hidden there XD
