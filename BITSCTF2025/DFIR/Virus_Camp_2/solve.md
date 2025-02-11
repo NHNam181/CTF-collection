@@ -17,7 +17,7 @@ FTK Imager
 ## Solution ##
 Continue with the exetnsion.js file, this block of code is the main part I investigate.  
 To begin with, I can see that that the script content is encoded with base64 and then it got reversed. I can see it here through the red code line:  
-![Code1](Image/2.png2.png)
+![Code1](Image/2.png)
 
 First thing I do is to reverse the character and then decode it with base64:  
 ```bash
