@@ -13,8 +13,8 @@ Download this image file and find the flag.
 None
 
 ## Tool ##
-Exiftool  
-Any preferred text editor
+- Exiftool  
+- Any preferred text editor
  
 ## Solution ##
 Another stenography task. When I check in exiftool I found this interesting:
