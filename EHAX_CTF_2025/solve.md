@@ -38,10 +38,12 @@ Using stegsolve, we can find the password for the zip:
 2. Use Aperi'Solve:  
 Upload the image to Aperi'Solve and you should get the password:  
 ![Aperi](image/aperi.png)  
-After entering the password, open the flag.txt and I got this: YB4R{x00zyh$bgcln7_f0p3yx_$n4ws}  
+After entering the password, open the flag.txt and I got this: YB4R{x00zyh$bgcln7_f0p3yx_$n4ws}   
 The format should be EH4X{flag}. Paying attention to the character I can see that the letter is shifted 6 places forward.  
-Any online vigerene tool or a simple code can help you with this (even manual method XD).  
-Flag: EH4X{d00fen$hmirt7_l0v3ed_$t4cy}
+Any online vigerene tool or a simple code can help you with this (even manual method XD).   
+Flag: EH4X{d00fen$hmirt7_l0v3ed_$t4cy}  
+**Shoutout to DaddyThanos for recommending me with Aprei'solve. Very useful tool!**
+
 
 
 
