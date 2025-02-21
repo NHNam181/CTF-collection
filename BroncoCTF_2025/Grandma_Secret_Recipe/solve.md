@@ -2,7 +2,7 @@
  
 ## Overview ##
  
-Category: Web
+Category: Web  
 Score: 10
  
 ## Description ##
@@ -27,6 +27,7 @@ Now, we need to change the role so access to the pantry as below (the checksum i
 ```bash
 Cookie: role="grandma"; checksum=a5d19cdd5fd1a8f664c0ee2b5e293167
 ```  
+The flag should be in front of our eyes.  
 Flag: bronco{grandma-makes-b3tter-cookies-than-girl-scouts-and-i-w1ll-fight-you-over-th@t-fact}
 
 
