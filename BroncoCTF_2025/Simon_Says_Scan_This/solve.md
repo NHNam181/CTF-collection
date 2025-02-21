@@ -26,7 +26,7 @@ I can see that I have to flip the corners of the second part and reorder it to t
 I detached the part 2 image into 5 parts: blue, red, green, yellow and gridline as below:  
 ![Parts](image/og/shot.png)  
 Combine it all together and crop the black border outside of the new QR, we have the following:  
-![Final](image/og/qr.png)  
+<img src="image/og/qr.png" style="width:50%;">
 Scan it and we should get the flag:  
 ```bash
 └─$ zbarimg qr.png
