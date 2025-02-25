@@ -69,5 +69,16 @@ The flag should be printed out as an image:
 
 ## Some thoughts & caution ##
 - This appears to be a VS Code malware, specifically a malicious VS Code extension that executes PowerShell commands. The activation function runs when the "rs" command is triggered.  
-- A better approach to find the suspicious file in this task is to check the PowerShell history in the AppData folder. After this, find the source that executed those commands. 
 - During the challenge, I spent too much time in the AppData folder and I completely ignored the .vscode folder.The reason was I thought that the key would be hidden there XD
+- A better approach to find the suspicious file in this task is to check the PowerShell history in the AppData folder. Navigate to the following path:
+```bash
+AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
+```   
+The file says:  
+```bash
+powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Temp\temp0001
+powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Temp\temp0001.ps1
+```
+Follow the path in the .txt file and we should be able to find the malware's source.  
+- Another way to track the history activity is to export the NTUSER.DAT hive and analyze with Zimmerman's Registry Explorer (For some reasons I could not export the .DAT file for analyzing).
+
