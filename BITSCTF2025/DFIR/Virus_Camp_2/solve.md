@@ -80,5 +80,5 @@ powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Tem
 powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Temp\temp0001.ps1
 ```
 Follow the path in the .txt file and we should be able to find the malware's source.  
-- Another way to track the history activity is to export the NTUSER.DAT hive and analyze with Zimmerman's Registry Explorer (For some reasons I could not export the .DAT file for analyzing).
+- Another way to track the history activity is to export the NTUSER.DAT hive and analyze with **Zimmerman's Registry Explorer** (For some reasons I could not export the .DAT file for analyzing).
 
