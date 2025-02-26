@@ -79,6 +79,7 @@ The file says:
 powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Temp\temp0001
 powershell.exe -ExecutionPolicy Bypass -File C:\Users\vboxuser\AppData\Local\Temp\temp0001.ps1
 ```
-Follow the path in the .txt file and we should be able to find the malware's source.  
+Follow the path in the .txt file and we should be able to find the malware's source. Or search the string "temp0001" will also help in finding the source.  
+- If you want to further analyze the .ad1 file, it is recommended to run in a virtual machine.
 - Another way to track the history activity is to export the NTUSER.DAT hive and analyze with **Zimmerman's Registry Explorer** (For some reasons I could not export the .DAT file for analyzing).
 
