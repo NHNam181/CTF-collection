@@ -86,9 +86,8 @@ In the given information, pay attention to these:
 compression method:                             none (stored)
 minimum software version required to extract:   1.0
 ```
-The file is stored (not compressed), which is good for bkcrack because the encrypted bytes directly match the original file bytes.  
-Also, the minimum software version of this zip is 1.0, while stronger encryption such as AES-encrypted zip will require 2.0+ version.  
-Looking online for .zip tool, I found bkcrack: https://github.com/Skriep/CTF-Crypto-bkcrack  
+Since the ZIP file uses no compression (stored) and requires only version 1.0 to extract(while AES encryption requires 2.0+), the encryption is weak and can be broken easily.  
+Looking online for .zip tool, I found bkcrack: https://github.com/Skriep/CTF-Crypto-bkcrack.  
 Since we know the first 12 bit of a png file:
 ```bash
 echo -ne '\x89\x50\x4E\x47\x0D\x0A\x1A\x0A\x00\x00\x00\x0D\x49\x48\x44\x52' > header.bin
@@ -110,5 +109,5 @@ Now, we have 3 keys, which is the internal password representation. Finally:
 ./bkcrack -C recipe.zip -c secret_recipe.png -k 7cfefd6a 4aedd214 970c7187 -d hi.png
 ```
 And we got the flag:  
-<img src="file/hi.png" width="50%">
+<img src="file/hi.png" width="75%">
 
