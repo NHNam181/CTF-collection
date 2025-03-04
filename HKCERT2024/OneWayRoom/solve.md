@@ -38,7 +38,7 @@ blkid /dev/sda1
 With the hash, use John the Ripper to crack the password:  
 ![Image](file/image5.png)  
 We got the credentials for both users in the machine.  
-***Deleted file flag:** Open the recycle bin and recover the file. The flag should be there.  
+**Deleted file flag:** Open the recycle bin and recover the file. The flag should be there.  
 **Answer:**  
 ![Image](file/image6.png)  
 Flag: hkcert24{h4v3_4_t4st3_0f_1inux_f0r3nsic_0r_b3ing_rickr011_4g4in}
