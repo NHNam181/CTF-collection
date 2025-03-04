@@ -33,12 +33,12 @@ This might be the answer I needed. This looks like a login script from the msfco
 blkid /dev/sda1
 ```
 **Answer:**  
-![Image](file/image4.png)  
+![Image](file/image5.png)  
 **Password for user very-secure:** Check the hash in /etc/shadow and we found the following hash: very-secure:$1$icecream$BFNWlq61bRSp1IX4spIAR.  
 With the hash, use John the Ripper to crack the password:  
-![Image](file/image5.png)  
+![Image](file/image6.png)  
 We got the credentials for both users in the machine.  
 **Deleted file flag:** Open the recycle bin and recover the file. The flag should be there.  
 **Answer:**  
-![Image](file/image6.png)  
+![Image](file/image7.png)  
 Flag: hkcert24{h4v3_4_t4st3_0f_1inux_f0r3nsic_0r_b3ing_rickr011_4g4in}
