@@ -34,8 +34,7 @@ blkid /dev/sda1
 ```
 **Answer:**  
 ![Image](file/image4.png)  
-**Password for user very-secure:** Check the hash in /etc/shadow and we found the following hash:
-- hash: very-secure:$1$icecream$BFNWlq61bRSp1IX4spIAR.  
+**Password for user very-secure:** Check the hash in /etc/shadow and we found the following hash: very-secure:$1$icecream$BFNWlq61bRSp1IX4spIAR.  
 With the hash, use John the Ripper to crack the password:  
 ![Image](file/image5.png)  
 We got the credentials for both users in the machine.  
