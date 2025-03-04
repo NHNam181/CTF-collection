@@ -28,7 +28,7 @@ After installing the program, I analyze the disk and answer the question:
 ![Image](file/image3.png)  
 This might be the answer I needed. This looks like a login script from the msfconsole.  
 **Answer:** 192.166.246.54  
-**UUID of /dev/sda1:**Use command and we got the answer:
+**UUID of /dev/sda1:** Use command and we got the answer:
 ```bash
 blkid /dev/sda1
 ```
