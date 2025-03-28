@@ -40,7 +40,7 @@ HTB{4PT_28_4nd_m1cr0s0ft_s34rch=1n1t14l_4cc3s!!}
 And we got the flag!
 
 ## The intended way
-The flag inside the configs file was so obvious. Let's turn back to the endpoint that we discovered in the CV. Revisiting the endpoint we have a Resume.pdf.lnk and download it. I began to check the metadata of the file:  
+The flag inside the configs file was so obvious. Let's turn back to the endpoint that we discovered in the CV. Revisit the endpoint, we have a Resume.pdf.lnk and download it. I began to check the metadata of the file:  
 ```bash
 └─$ exiftool Resume.pdf\ \ \(1\).download
 ExifTool Version Number         : 12.76
