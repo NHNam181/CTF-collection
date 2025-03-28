@@ -27,7 +27,7 @@ Viewing inside the .php we can see this:
 window.location.href=`search:displayname=Downloads&subquery=\\\\${window.location.hostname}@${window.location.port}\\3fe1690d955e8fd2a0b282501570e1f4\\resumes\\`;  
 ```  
 Let's try to access the endpoint:  
-![Part 2](image/p2.png)
+![Part 2](image/p2.png)  
 I began checking all the folders and tried the configs/client.py first. Inside the python file there is a base64 decoded line:  
 ```bash
 key = base64.decode("SFRCezRQVF8yOF80bmRfbTFjcjBzMGZ0X3MzNHJjaD0xbjF0MTRsXzRjYzNzISF9Cg==")
