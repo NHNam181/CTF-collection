@@ -15,7 +15,7 @@ Today is Alice's first day at the Wayne Enterprises' Security Operations Center.
 - VirusTotal
 
 ## Solution ##
-1. What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?  
+**1. What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?**   
 Let’s see what type of data that we can start with:
 ```text
 |metadata index="botsv1" type=sourcetypes 
@@ -39,7 +39,7 @@ This query will find activities where the domain **imreallynotbatman** appears:
 </p>
 **Answer: 40.80.148.42**  
 
-2. What company created the web vulnerability scanner used by Po1s0n1vy? Type the company name.  
+**2. What company created the web vulnerability scanner used by Po1s0n1vy? Type the company name.**    
 Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scanner:   
 <p align="center">
   <img src="image/Picture2.png" alt="Cool" width="50%" />
@@ -47,7 +47,7 @@ Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scann
 
 **Answer: Acunetix**  
 
-3. What content management system is imreallynotbatman.com likely using?  
+**3. What content management system is imreallynotbatman.com likely using?**  
 Look at the event table and the CMS should be there:  
 <p align="center">
   <img src="image/Picture3.png" alt="Cool" width="100%" />
@@ -55,7 +55,7 @@ Look at the event table and the CMS should be there:
 
 **Answer: joomla**  
 
-4. What is the name of the file that defaced the imreallynotbatman.com website? Please submit only the name of the file with extension.  
+**4. What is the name of the file that defaced the imreallynotbatman.com website? Please submit only the name of the file with extension.**  
 Defacing means the image or graffiti that ruins the surface of something. Maybe an image extension can help in this situation. Since we already know the Web Server IP is **192.168.250.70**. Let’s dive more into this IP:  
 ```text
 index="botsv1" sourcetype="stream:http" "192.168.250.70"
@@ -68,7 +68,7 @@ Looking all the image files and eventually the file name can be found:
   <img src="image/Picture4.png" alt="Cool" width="100%" />
 </p> 
 
-5. This attack used dynamic DNS to resolve to the malicious IP. What fully qualified domain name (FQDN) is associated with this attack?  
+**5. This attack used dynamic DNS to resolve to the malicious IP. What fully qualified domain name (FQDN) is associated with this attack?**  
 A fully qualified domain name (FQDN) is the complete address of an internet host or computer. It provides its exact location within the domain name system (DNS) by specifying the hostname, domain name and top-level domain (TLD). For example, for the domain name www.whatis.com, "www" is the hostname, "whatis" is the domain name and ".com" is the top-level domain.  
 View the event that contain the .jpeg, the FQDN can be found easily:
 <p align="center">
@@ -77,14 +77,14 @@ View the event that contain the .jpeg, the FQDN can be found easily:
 
 ***Answer: prankglassinebracket.jumpingcrab.com**
 
-6. What IPv4 address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?
+**6. What IPv4 address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?**  
 The phrase "pre-staged domain" typically refers to domains that have been **set up in advance** by attackers for a future malicious purpose. These domains are often registered or configured ahead of time for later exploitation in a cyberattack.  
 Still inside the event, the IP for this question can be found:  
 <p align="center">
   <img src="image/Picture6.png" alt="Cool" width="50%" />
 </p>
 
-7. What IPv4 address is likely attempting a brute force password attack against imreallynotbatman.com?
+**7. What IPv4 address is likely attempting a brute force password attack against imreallynotbatman.com?**  
 When an attacker tried to brute force attack a website, the sent request is a POST request. As we have a new pre – staged ip **23.22.63.114**, let’s dive deeper into the activity of this IP:
 ```text
 index="botsv1" sourcetype=stream:http src_ip=23.22.63.114
@@ -103,7 +103,7 @@ In the event view, in the form data section:
 
 We can see that the IP repeatedly tries the username admin with different passwords. This is the IP that we need.  
 
-8. What is the name of the executable uploaded by Po1s0n1vy?  
+**8. What is the name of the executable uploaded by Po1s0n1vy?**   
 Looking for executable files, means that .exe, .bat, .ps1. To confirm which OS the Wayne Enterprise use, in the previous search, it already showed.
 <p align="center">
   <img src="image/Picture10.png" alt="Cool" width="75%" />
@@ -125,14 +125,14 @@ There is no executable for this IP. Let’s try for 40.80.148.42:
 
 **Answer: 3791.exe**  
 
-9. What is the MD5 hash of the executable uploaded?  
+**9. What is the MD5 hash of the executable uploaded?**   
 View the event contain the .exe and we should be able to find the hash of the .exe. But this is the SHA256 hash:  
 ![Cool](image/Picture13.png)  
 Let’s upload it to virustotal and what’s the file:  
 ![Cool](image/Picture14.png)  
 The file looks fun. Anyway we have our MD5 hash this question.  
 
-10. What was the first brute force password used?
+**10. What was the first brute force password used?**  
 From the previous brute force question, we already know the src_content for this is “username=admin*”.  
 Let’s look for first password using this:  
 ```text
@@ -142,7 +142,7 @@ index="botsv1" sourcetype=stream:http src_content="username=admin*"
 ```
 ![Cool](image/Picture15.png)  
 
-11. One of the passwords in the brute force attack is James Brodsky's favorite Coldplay song. We are looking for a six character word on this one. Which is it?  
+**11. One of the passwords in the brute force attack is James Brodsky's favorite Coldplay song. We are looking for a six character word on this one. Which is it?**    
 Continue with the password query, add the rex field to search for only the password with 6 characters:  
 ```text
 index="botsv1" sourcetype=stream:http src_content="username=admin*"
@@ -156,7 +156,7 @@ From here, we should get the list of passwords:
 ![Cool](image/Picture16.png)  
 But which is the Coldplay song? According to Wikipedia, there are some 6 – character – word song such as Sparks, Shiver, Yellow. In the list, there is yellow. We found it. 
 
-12. What was the correct password for admin access to the content management system running "imreallynotbatman.com"?  
+**12. What was the correct password for admin access to the content management system running "imreallynotbatman.com"?**  
 If the access is complete, it means that the brute force will stop. From this, we can find what is the correct password with the timestamp:  
 ```text
 index="botsv1" sourcetype=stream:http src_content="username=admin*"
@@ -167,7 +167,7 @@ index="botsv1" sourcetype=stream:http src_content="username=admin*"
 ![Cool](image/Picture17.png)
 **Answer: batman**
 
-13. How many seconds elapsed between the time the brute force password scan identified the correct password and the compromised login?
+**13. How many seconds elapsed between the time the brute force password scan identified the correct password and the compromised login?**
 I took a while to understand the question. There are two IPs: **23.22.63.114** and **40.80.148.42**. A brute force attack was launched on Joomla Admin login page. The **23.22.64.114** is responsible for the brute force attack. After getting the correct password, the attacker did not continue from the same IP. Instead, he moved to the **40.80.148.42** to login the page. To find the correct timestamp, use the querry:  
 ```text
 index="botsv1" sourcetype=stream:http  src_content=username* AND src_content=*batman*
@@ -176,22 +176,22 @@ index="botsv1" sourcetype=stream:http  src_content=username* AND src_content=*ba
 ![Cool](image/Picture18.png)  
 We should be able to get the timestamp. The elapsed seconds is 92.17 seconds.  
 
-14. How many unique passwords were attempted in the brute force attempt?  
+**14. How many unique passwords were attempted in the brute force attempt?**  
 This one is easy. Simply add dedup passwd and we are done:
 ![Cool](image/Picture19.png) 
 
-15. What special hex code is associated with the customized malware discussed in question 111?  
+**15. What special hex code is associated with the customized malware discussed in question 111?**       
 Upload the hash to virustotal and we got this:  
 ![Cool](image/Picture20.png)  
 Scrolling to the community tab and there is the hex XD (The intended way is to upload)
 
-16. GCPD reported that common TTPs (Tactics, Techniques, Procedures) for the Po1s0n1vy APT group, if initial compromise fails, is to send a spear phishing email with custom malware attached to their intended target. This malware is usually connected to Po1s0n1vys initial attack infrastructure. Using research techniques, provide the SHA256 hash of this malware.    
+**16. GCPD reported that common TTPs (Tactics, Techniques, Procedures) for the Po1s0n1vy APT group, if initial compromise fails, is to send a spear phishing email with custom malware attached to their intended target. This malware is usually connected to Po1s0n1vys initial attack infrastructure. Using research techniques, provide the SHA256 hash of this malware.**   
 Upload the IP to VirusTotal and look at the Relations tab:  
 ![Cool](image/Picture21.png)  
 MirandaTateScreensaver.scr.exe? This could be the Delivery Phase in the kill chain in case they failed to brute force the web server.  
 ![Cool](image/Picture22.png)  
 
-17. What was the average password length used in the password brute forcing attempt?  
+**17. What was the average password length used in the password brute forcing attempt?**
 As the hint:
 - Calculate the length of every password attempt and store the result in a new field. Then calulate the average of that new field with a stats command. Use eval to average, or just visually inspect.  
 - Then calulate the average of that new length field with a stats command, and finally use eval to round, or just manually round.  
