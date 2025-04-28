@@ -17,7 +17,7 @@ Today is Alice's first day at the Wayne Enterprises' Security Operations Center.
 ## Solution ##
 1. What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?  
 Let’s see what type of data that we can start with:
-```bash
+```text
 |metadata index="botsv1" type=sourcetypes 
 | stats values(sourcetype)
 ```
@@ -28,12 +28,33 @@ Here we have the result:
 
 
 From the sourcetype, let’s start with the Fortigate firewall:  
-```bash
+```text
 index="botsv1" sourcetype=fgt_* imreallynotbatman.com 
 |table src_ip dst_ip
 |stats count by src_ip dst_ip
 ```  
+This query will find activities where the domain **imreallynotbatman** appears:  
+![Cool](image/image1.png)   
+**Answer: 40.80.148.42**  
 
+2. What company created the web vulnerability scanner used by Po1s0n1vy? Type the company name.  
+Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scanner:   
+![Cool](image/Picture2.png)  
+**Answer: Acunetix**  
+
+3. What content management system is imreallynotbatman.com likely using?  
+Look at the event table and the CMS should be there:  
+![Cool](image/Picture3.png)  
+**Answer: joomla**  
+
+4. What is the name of the file that defaced the imreallynotbatman.com website? Please submit only the name of the file with extension.  
+Defacing means the image or graffiti that ruins the surface of something. Maybe an image extension can help in this situation. Since we already know the Web Server IP is **192.168.250.70**. Let’s dive more into this IP:
+```text
+index="botsv1" sourcetype="stream:http" "192.168.250.70"
+| search uri=*
+| where like(uri, "%.jpg") OR like(uri, "%.jpeg")
+| table _time src_ip dst_ip uri
+```
 
 
 
