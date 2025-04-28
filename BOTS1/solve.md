@@ -15,3 +15,10 @@ Today is Alice's first day at the Wayne Enterprises' Security Operations Center.
 - VirusTotal
 
 ## Solution ##
+1. What is the likely IPv4 address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?  
+Let’s see what type of data that we can start with:
+```bash
+|metadata index="botsv1" type=sourcetypes 
+| stats values(sourcetype)
+```
+![Image](image/image.png)
