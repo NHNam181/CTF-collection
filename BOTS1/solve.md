@@ -34,7 +34,9 @@ index="botsv1" sourcetype=fgt_* imreallynotbatman.com
 |stats count by src_ip dst_ip
 ```  
 This query will find activities where the domain **imreallynotbatman** appears:  
-![Cool](image/image1.png)   
+<p align="center">
+  <img src="image/image1.png" alt="Cool" width="150%" />
+</p>
 **Answer: 40.80.148.42**  
 
 2. What company created the web vulnerability scanner used by Po1s0n1vy? Type the company name.  
@@ -48,7 +50,7 @@ Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scann
 3. What content management system is imreallynotbatman.com likely using?  
 Look at the event table and the CMS should be there:  
 <p align="center">
-  <img src="image/Picture3" alt="Cool" width="150%" />
+  <img src="image/Picture3.png" alt="Cool" width="150%" />
 </p>
 
 **Answer: joomla**  
