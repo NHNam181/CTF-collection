@@ -49,9 +49,7 @@ Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scann
 
 3. What content management system is imreallynotbatman.com likely using?  
 Look at the event table and the CMS should be there:  
-<p align="center">
-  <img src="image/Picture3.png" alt="Cool" width="150%" />
-</p>
+![Cool](image/Picture3.png)
 
 **Answer: joomla**  
 
