@@ -21,13 +21,16 @@ Let’s see what type of data that we can start with:
 |metadata index="botsv1" type=sourcetypes 
 | stats values(sourcetype)
 ```
-<img src="image/image.png" alt="Cool" style="width: 75%;"/>  
+Here we have the result:  
+<img src="image/image.png" alt="Cool" style="width: 50%;" />
+
 From the sourcetype, let’s start with the Fortigate firewall:  
 ```bash
 index="botsv1" sourcetype=fgt_* imreallynotbatman.com 
 |table src_ip dst_ip
 |stats count by src_ip dst_ip
 ```  
+
 
 
 
