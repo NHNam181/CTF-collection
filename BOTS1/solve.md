@@ -22,7 +22,10 @@ Let’s see what type of data that we can start with:
 | stats values(sourcetype)
 ```
 Here we have the result:  
-<img src="image/image.png" alt="Cool" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" />
+<p align="center">
+  <img src="image/image.png" alt="Cool" width="50%" />
+</p>
+
 
 From the sourcetype, let’s start with the Fortigate firewall:  
 ```bash
