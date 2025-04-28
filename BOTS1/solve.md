@@ -49,7 +49,9 @@ Follow the 40.80.148.42 IP, view the attack event and we can find the vuln scann
 
 3. What content management system is imreallynotbatman.com likely using?  
 Look at the event table and the CMS should be there:  
-![Cool](image/Picture3.png)
+<p align="center">
+  <img src="image/Picture3.png" alt="Cool" width="100%" />
+</p>
 
 **Answer: joomla**  
 
@@ -62,18 +64,25 @@ index="botsv1" sourcetype="stream:http" "192.168.250.70"
 | table _time src_ip dst_ip uri
 ```
 Looking all the image files and eventually the file name can be found:  
-![Cool](image/Picture4.png)  
+<p align="center">
+  <img src="image/Picture4.png" alt="Cool" width="100%" />
+</p> 
 
 5. This attack used dynamic DNS to resolve to the malicious IP. What fully qualified domain name (FQDN) is associated with this attack?  
 A fully qualified domain name (FQDN) is the complete address of an internet host or computer. It provides its exact location within the domain name system (DNS) by specifying the hostname, domain name and top-level domain (TLD). For example, for the domain name www.whatis.com, "www" is the hostname, "whatis" is the domain name and ".com" is the top-level domain.  
 View the event that contain the .jpeg, the FQDN can be found easily:
-![Cool](image/Picture5.png)  
+<p align="center">
+  <img src="image/Picture5.png" alt="Cool" width="100%" />
+</p> 
+
 ***Answer: prankglassinebracket.jumpingcrab.com**
 
 6. What IPv4 address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?
 The phrase "pre-staged domain" typically refers to domains that have been **set up in advance** by attackers for a future malicious purpose. These domains are often registered or configured ahead of time for later exploitation in a cyberattack.  
 Still inside the event, the IP for this question can be found:  
-![Cool](image/Picture6.png)  
+<p align="center">
+  <img src="image/Picture6.png" alt="Cool" width="100%" />
+</p>
 
 7. What IPv4 address is likely attempting a brute force password attack against imreallynotbatman.com?
 When an attacker tried to brute force attack a website, the sent request is a POST request. As we have a new pre – staged ip **23.22.63.114**, let’s dive deeper into the activity of this IP:
@@ -82,10 +91,16 @@ index="botsv1" sourcetype=stream:http src_ip=23.22.63.114
 |table src_ip dest_ip
 |stats count by src_ip dest_ip
 ```
-![Cool](image/Picture7.png)  
+<p align="center">
+  <img src="image/Picture7.png" alt="Cool" width="100%" />
+</p>
+
 Total of 1430 activities. Let’s see what this IP is up to.  
 In the event view, in the form data section:  
-![Cool](image/Picture8.png)  
+<p align="center">
+  <img src="image/Picture8.png" alt="Cool" width="100%" />
+</p>
+
 We can see that the IP repeatedly tries the username admin with different passwords. This is the IP that we need.  
 
 8. What is the name of the executable uploaded by Po1s0n1vy?
